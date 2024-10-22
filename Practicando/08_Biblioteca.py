@@ -67,9 +67,9 @@ class Biblioteca():
     
     def mostrar_todos_los_libros(self):
         for libro in self.libros:
-            return f"""Titulo: {libro.titulo}
+            print (f"""Titulo: {libro.titulo}
             Autor: {libro.autor}
-            Genero: {libro.genero}"""
+            Genero: {libro.genero}""")
 
     def mostrar_libro(self, libro):
         if libro == libro.titulo:

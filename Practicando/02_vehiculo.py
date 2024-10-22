@@ -1,15 +1,3 @@
-#Clase Vehiculo:
-#Atributos:
-#marca: La marca del vehículo.
-#modelo: El modelo del vehículo.
-#año: Año de fabricación del vehículo.
-#estado: Un atributo booleano que indica si el vehículo está arrancado o no.
-#Métodos:
-#arrancar(): Cambia el estado del vehículo a "arrancado".
-#detener(): Cambia el estado del vehículo a "detenido".
-#mostrar_informacion(): Muestra la información del vehículo, incluyendo si está arrancado o 
-# detenido.
-
 class Vehiculo:
     def __init__(self, marca, modelo, año):
         self.marca = marca
