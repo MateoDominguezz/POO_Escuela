@@ -44,26 +44,18 @@ class Biblioteca():
     def agregar_libro(self,libro1):
         self.libros.append(libro1)
         return f"El libro: {libro1}, se añadio a la biblioteca"
-    
-    def buscar_libros_por_autor(self, autor):
-        libros_encontrados = []
+
+    def buscar_libro_autor(self, autor):
         for libro in self.libros:
             if libro.autor == autor:
-                libros_encontrados.append(libro)
-        if libros_encontrados:
-            return f"Se encontraron los libros: {[libro.titulo for libro in libros_encontrados]}"
-        else:
-            return f"No se encontró ningún libro del autor: {autor}"
+                return f"Tu libro encontrado por autor es: {libro.mostrar_libro()}"
+        return "No se encontraron ningun libro con ese autor"
 
-    def buscar_libros_por_genero(self, genero):
-        libros_encontrados = []
+    def buscar_libros_genero(self, genero):
         for libro in self.libros:
             if libro.genero == genero:
-                libros_encontrados.append(libro)
-        if libros_encontrados:
-            return f"Se encontraron los libros: {[libro.titulo for libro in libros_encontrados]}"
-        else:
-            return f"No se encontró ningún libro del género {genero}"
+                return f"Tu libro es: {libro.mostrar_libro()}"
+        return "No se encontraro ningun libro, con ese genero"
     
     def mostrar_todos_los_libros(self):
         for libro in self.libros:
